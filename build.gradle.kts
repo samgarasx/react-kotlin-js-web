@@ -8,20 +8,11 @@ version = "0.1.0"
 repositories {
     mavenCentral()
     jcenter()
-    maven {
-        url = uri("https://dl.bintray.com/kotlin/kotlinx")
-    }
-    maven {
-        url = uri("https://dl.bintray.com/kotlin/kotlin-js-wrappers")
-    }
-    maven {
-        url = uri("https://dl.bintray.com/kotlin/kotlin-eap")
-    }
+    maven("https://dl.bintray.com/kotlin/kotlinx")
+    maven("https://dl.bintray.com/kotlin/kotlin-js-wrappers")
 }
 
 dependencies {
-    implementation(kotlin("stdlib-js"))
-
     implementation("org.jetbrains.kotlinx:kotlinx-html-js:${kotlinxHtmlJsVersion}")
     implementation("org.jetbrains:kotlin-react:${kotlinReactVersion}")
     implementation("org.jetbrains:kotlin-react-dom:${kotlinReactDomVersion}")
